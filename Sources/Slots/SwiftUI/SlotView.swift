@@ -31,24 +31,25 @@ public extension SlotView {
     }
 }
 
-// #Preview {
-//    @Previewable @State var value = true
-//
-//    let content = VStack {
-//        Toggle("slot", isOn: $value)
-//        SlotView.maybe(for: 42)
-//    }
-//    .padding()
-//
-//    if value {
-//        content
-//            .slot(for: Int.self) { value in
-//                Text("Int: \(value)")
-//            }
-//    } else {
-//        content
-//    }
-// }
+@available(iOS, introduced: 17.0)
+#Preview {
+    @Previewable @State var value = true
+
+    let content = VStack {
+        Toggle("slot", isOn: $value)
+        SlotView.maybe(for: 42)
+    }
+    .padding()
+
+    if value {
+        content
+            .slot(for: Int.self) { value in
+                Text("Int: \(value)")
+            }
+    } else {
+        content
+    }
+}
 
 #Preview {
     SlotView(for: 42)
