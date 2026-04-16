@@ -7,7 +7,7 @@ public protocol SlotExample {
 extension SlotExample {
     @MainActor
     static var view: some View {
-        SlotView(for: Self.value)
+        SlotView(for: value)
     }
 }
 

@@ -2,7 +2,7 @@
 import SwiftUI
 import Testing
 
-@Suite struct SlotItemTests {
+struct SlotItemTests {
     @Test func initializer_missing_1() throws {
         let sut = SlotItem.missing { _ in }
         let (symbol, _) = try #require(sut.store.storage.first)

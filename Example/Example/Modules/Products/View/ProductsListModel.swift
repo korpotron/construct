@@ -8,7 +8,7 @@ import SwiftUI
 
         init(catching body: () async throws -> [Product]) async {
             do {
-                self = .content(try await body())
+                self = try await .content(body())
             } catch {
                 self = .failure(error)
             }

@@ -14,7 +14,7 @@ extension Product {
         static let example: [Product] = [
             .fixtures.foo,
             .fixtures.bar,
-            .fixtures.baz
+            .fixtures.baz,
         ]
     }
 }

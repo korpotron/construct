@@ -2,7 +2,7 @@
 import SwiftUI
 import Testing
 
-@Suite @MainActor struct SlotContentBuilderTests {
+@MainActor struct SlotContentBuilderTests {
     @Test func example_1() {
         let sut = SlotContentBuilder {
             SlotItem(for: Foo.self) { foo in
@@ -61,9 +61,7 @@ import Testing
     }
 
     @Test func example_empty() {
-        let sut = SlotContentBuilder {
-
-        }
+        let sut = SlotContentBuilder {}
         #expect(sut.store.count == 0)
     }
 }

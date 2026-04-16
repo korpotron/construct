@@ -6,28 +6,28 @@ let package = Package(
     name: "Slots",
     platforms: [
         .iOS(.v16),
-        .macOS(.v13)
+        .macOS(.v13),
     ],
     products: [
         .library(
             name: "Slots",
             targets: [
                 "Slots",
-            ]
+            ],
         ),
     ],
     targets: [
         .target(
             name: "Slots",
             resources: [
-                .process("Resources/Error.xcstrings")
-            ]
+                .process("Resources/Error.xcstrings"),
+            ],
         ),
         .testTarget(
             name: "SlotsTests",
             dependencies: [
                 "Slots",
-            ]
+            ],
         ),
-    ]
+    ],
 )

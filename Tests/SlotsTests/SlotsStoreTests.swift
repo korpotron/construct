@@ -2,7 +2,7 @@
 import SwiftUI
 import Testing
 
-@Suite struct SlotsStoreTests {
+struct SlotsStoreTests {
     @Test func initialize_empty() {
         let sut = SlotsStore.empty
 
@@ -15,7 +15,7 @@ import Testing
                 symbol: SlotSymbol(Foo.self),
                 builder: SlotBuilder { (foo: Foo) in
                     Text(verbatim: foo.parameter)
-                }
+                },
             )
 
         #expect(sut.count == 1)
@@ -32,8 +32,8 @@ import Testing
                 for: Foo.self,
                 builder: { foo in
                     Text(verbatim: foo.parameter)
-                }
-            )
+                },
+            ),
         )
 
         #expect(original.count == 0)

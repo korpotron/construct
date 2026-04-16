@@ -31,7 +31,7 @@ public extension SlotView {
     }
 }
 
-//#Preview {
+// #Preview {
 //    @Previewable @State var value = true
 //
 //    let content = VStack {
@@ -48,7 +48,7 @@ public extension SlotView {
 //    } else {
 //        content
 //    }
-//}
+// }
 
 #Preview {
     SlotView(for: 42)

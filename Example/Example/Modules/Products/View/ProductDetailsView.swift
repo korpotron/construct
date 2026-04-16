@@ -25,7 +25,7 @@ struct ProductDetailsView: View {
         Color.yellow
             .navigationDestination(for: Product.self) { product in
                 ProductDetailsView(
-                    product: product
+                    product: product,
                 )
             }
     }

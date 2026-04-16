@@ -34,19 +34,19 @@ nonisolated extension ErrorView {
     static func fatal(message: LocalizedStringResource) -> Self {
         ErrorView(
             title: .error.fatal,
-            message: message
+            message: message,
         )
     }
 
     static func cast(to type: Any.Type) -> Self {
         .fatal(
-            message: .error.cast(to: type)
+            message: .error.cast(to: type),
         )
     }
 
     static func missing(for type: Any.Type) -> Self {
         .fatal(
-            message: .error.missing(for: type)
+            message: .error.missing(for: type),
         )
     }
 }

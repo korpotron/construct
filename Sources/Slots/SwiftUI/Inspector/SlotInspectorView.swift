@@ -37,7 +37,7 @@ public struct SlotInspectorView: View {
         SlotItem(for: String.self) { value in
             ErrorView(
                 title: "String builder",
-                message: LocalizedStringResource(String.LocalizationValue(value))
+                message: LocalizedStringResource(String.LocalizationValue(value)),
             )
         }
         SlotItem.missing { missing in

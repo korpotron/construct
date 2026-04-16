@@ -17,7 +17,7 @@ extension SlotItem {
 public extension SlotItem {
     init<T>(for symbol: T.Type, @ViewBuilder builder: @escaping (_ symbol: T) -> some View) {
         let storage = [
-            SlotSymbol(symbol): SlotBuilder(builder)
+            SlotSymbol(symbol): SlotBuilder(builder),
         ]
         let store = SlotsStore(storage: storage)
         self.init(store: store)
