@@ -3,7 +3,7 @@ import SwiftUI
 import Testing
 
 @MainActor struct SlotContentBuilderTests {
-    @Test func example_1() {
+    @Test func `example 1`() {
         let sut = SlotContentBuilder {
             SlotItem(for: Foo.self) { foo in
                 Text(String(describing: foo))
@@ -19,7 +19,7 @@ import Testing
         #expect(sut.store[Baz.self] == nil)
     }
 
-    @Test func example_2() {
+    @Test func `example 2`() {
         let sut = SlotContentBuilder {
             BazItem()
         }
@@ -30,7 +30,7 @@ import Testing
         #expect(sut.store[Baz.self] != nil)
     }
 
-    @Test func example_if_first() {
+    @Test func `example if first`() {
         let sut = SlotContentBuilder {
             if true {
                 FooItem()
@@ -45,7 +45,7 @@ import Testing
         #expect(sut.store[Baz.self] == nil)
     }
 
-    @Test func example_if_second() {
+    @Test func `example if second`() {
         let sut = SlotContentBuilder {
             if false {
                 FooItem()
@@ -60,7 +60,7 @@ import Testing
         #expect(sut.store[Baz.self] != nil)
     }
 
-    @Test func example_empty() {
+    @Test func `example empty`() {
         let sut = SlotContentBuilder {}
         #expect(sut.store.count == 0)
     }

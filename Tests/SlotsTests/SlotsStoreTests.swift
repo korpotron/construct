@@ -3,7 +3,7 @@ import SwiftUI
 import Testing
 
 struct SlotsStoreTests {
-    @Test func initialize_empty() {
+    @Test func `initialize empty`() {
         let sut = SlotsStore.empty
 
         #expect(sut.count == 0)
@@ -25,7 +25,7 @@ struct SlotsStoreTests {
         #expect(sut[Foo.self]?(Foo(parameter: "foo")) != nil)
     }
 
-    @Test func appending_item() {
+    @Test func `appending item`() {
         let original = SlotsStore.empty
         let sut = original.appending(
             item: SlotItem(
@@ -40,7 +40,7 @@ struct SlotsStoreTests {
         #expect(sut.count == 1)
     }
 
-    @Test func appending_creates_new_instance() {
+    @Test func `appending creates new instance`() {
         let original = SlotsStore.empty
         let sut = original.appending { (foo: Foo) in
             Text(verbatim: foo.parameter)
