@@ -1,6 +1,6 @@
 import Foundation
 
-public struct SlotSymbol: Hashable, Comparable, Identifiable {
+public struct SlotSymbol: Hashable, Comparable, Identifiable, Sendable {
     public let id: ObjectIdentifier
     let name: String
     let type: Any.Type
